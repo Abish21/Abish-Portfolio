@@ -1,0 +1,105 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Inter', sans-serif; 
+    font-size: 16px;                
+    line-height: 1.5;                
+    background-color: #ffffff;       
+    color: #333333;                  
+    margin: 0;
+}
+
+/* Header */
+
+.ab-pfo-nav-section{
+    background-color: #2B2B2B;
+}
+
+.ab-pfo-nav-main-div{
+    display: flex;
+    padding: 2rem 0;
+}
+
+.ab-pfo-nav-list-container{
+    flex: 1
+}
+
+.ab-pfo-nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 0;
+}
+
+.ab-pfo-nav-list .ab-pfo-nav-list-item .ab-pfo-nav-item{
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif; 
+    font-size: 24px;                
+    line-height: normal; 
+    text-decoration: none;
+    padding: 10px 0;
+    /* transition: 0.5s ease; */
+}
+
+.ab-pfo-nav-list .ab-pfo-nav-list-item .ab-pfo-nav-item:hover{
+    border-bottom: 2px solid #fff;
+    /* transition: 0.5s ease; */
+}
+
+.ab-pfo-hamburger{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.ab-pfo-hamburger span{
+    width: 49px;
+    height: 4px;
+    background-color: #fff;
+}
+
+/* Banner Section */
+
+.ab-pfo-banner-section{
+    background: url(../images/banner-background.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 50%;
+    background-position-y: 35%;
+}
+
+.ab-pfo-banner-container {
+    padding-top: 40px;
+}
+
+.ab-pfo-banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.ab-pfo-banner-name{
+    font-family: "Itim", serif;
+    font-weight: 400;
+    font-style: normal; 
+    color: #000000;
+    font-size: 64px; 
+}
+
+.ab-pfo-banner-description{
+    font-family: "Kalam", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 28px; 
+}
