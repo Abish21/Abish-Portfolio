@@ -103,3 +103,50 @@ body {
     color: #000000;
     font-size: 28px; 
 }
+
+/* Technical Section */
+.ab-pfo-tech-section{
+    padding: 40px 0;
+    background: url(../images/techbg.png)
+}
+
+.ab-pfo-sec-head-section{
+    position:relative;
+}
+
+.ab-pfo-sec-head-overflow{
+    background-color: #000000;
+    width: 410px;
+    height: 62px;
+    margin:0 auto;
+    transform: rotate(2.5deg);
+    transition:0.3s ease;
+}
+
+.ab-pfo-sec-head-section:hover .ab-pfo-sec-head-overflow{
+    transform: rotate(-2.5deg);
+    transition:0.3s ease;
+}
+
+.ab-pfo-sec-head{
+    background-color: #F3E04F;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 20px;
+    border: 1px solid #000000;
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, 0%);
+}
+
+.ab-pfo-sec-head p{
+    font-family: Jua;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+    color: #000000;
+}
