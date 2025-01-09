@@ -107,7 +107,7 @@ body {
 /* Technical Section */
 .ab-pfo-tech-section{
     padding: 40px 0;
-    background: url(../images/techbg.png)
+    background: url(../images/yellowbg.png)
 }
 
 .ab-pfo-sec-head-section{
@@ -149,4 +149,197 @@ body {
     line-height: normal;
     margin-bottom: 0;
     color: #000000;
+}
+
+.ab-pfo-tech-skills-section{
+    padding: 100px 0;
+}
+
+.ab-pfo-tech-skills{
+    position: relative;
+}
+
+.ab-pfo-tech-skill-holder{
+    display: flex !important;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    min-height: 312px;
+    border-radius: 100px;
+    border: 1px solid #000000;
+}
+
+.ab-pfo-tech-skills-section .slick-slide {
+    margin: 0 20px; 
+}
+
+.ab-pfo-tech-skills-section .slick-arrow{
+    border:none;
+    position: absolute;
+    bottom:-30%;
+    background: transparent;
+}
+
+.ab-pfo-tech-skills-section .slick-arrow:hover svg circle{
+    fill: #000000;
+}
+
+.ab-pfo-tech-skills-section .slick-arrow:hover svg path{
+    fill: #F3E04F;
+}
+
+.ab-pfo-tech-skills-section .slick-prev{
+    right: 51%;
+}
+
+.ab-pfo-tech-skills-section .slick-next{
+    left: 51%;
+}
+
+/* My Professional Journey */
+
+.ab-pfo-prof-jrny-section{
+    padding: 80px;
+}
+
+.ab-pfo-prof-jrny-head h1{
+    font-family: Jua;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.ab-pfo-prof-jrny-content p{
+    font-family: Kalam;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 30px;
+}
+
+
+
+/* Projects that define me */
+
+
+.ab-pfo-projects h1{
+    font-family: Jua;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: #000000;
+}
+
+.ab-pfo-marquee-container {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    transform: none;
+  }
+  
+  .ab-pfo-marquee {
+    flex: 0 0 auto;
+    min-width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: scroll 20s linear 0s infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-direction: normal;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .ab-pfo-initial-child-container {
+    flex: 0 0 auto;
+    display: flex;
+    min-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  
+  .ab-pfo-child {
+    transform: none;
+  }
+.object-contain {
+    object-fit: contain;
+}
+
+.w-32 {
+    width: 8rem;
+}
+
+.h-24 {
+    height: 6rem;
+}
+
+.mr-16 {
+    margin-right: 4rem;
+}
+
+.ab-pfo-lazyload-wrapper{
+    margin-bottom: 30px;
+}
+
+/* Recognition and awards */
+
+.ab-pfo-awards-section{
+    margin: 60px 0;
+    background: url(../images/yellowbg.png);
+    padding: 40px 0;
+}
+
+.ab-pfo-reg-head-oveflow{
+    width:567px;
+}
+
+.ab-pfo-awards-holder{
+    border: 1px solid #000000;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 352px; */
+}
+
+.ab-pfo-award-name{
+    border-top: 2px solid #000000;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.ab-pfo-award-name p{
+    font-family: Kalam;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38.26px;
+    text-align: center;
+    color: #000000;
+}
+
+.ab-pfo-certificate-holder{
+    padding:30px;
+}
+
+.ab-pfo-awards-lists-section{
+    margin: 70px 0 20px 0;
 }
