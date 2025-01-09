@@ -317,7 +317,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* width: 352px; */
+    background-color: #ffffff;
 }
 
 .ab-pfo-award-name{
@@ -342,4 +342,108 @@ body {
 
 .ab-pfo-awards-lists-section{
     margin: 70px 0 20px 0;
+}
+
+
+/* Academic Backgrounds */
+
+.ab-pfo-academic-section{
+    margin: 40px 0;
+}
+
+.ab-pfo-academic-head h1{
+    font-family: Jua;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: #000000;
+}
+
+.ab-pfo-academic-tabs{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.ab-pfo-academic-tab{
+    min-width: 215px;
+    font-family: Kalam;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    line-height: 51px;
+    vertical-align: middle;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.ab-pfo-academic-tab:hover{
+    background-color: #F3E04F;
+    transition: 0.3s ease;
+}
+
+.ab-pfo-academic-tab.active{
+    background-color: #F3E04F;
+}
+
+.ab-pfo-academic-tab p{
+    margin-bottom: 0;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.ab-pfo-academic-score{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.ab-pfo-academic-score p{
+    font-family: Kalam;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    color: #000000;
+}
+
+.ab-pfo-academic-tab-content{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.ab-pfo-academic-tab-content{
+    display: none;
+}
+
+
+.ab-pfo-academic-tab-content.active{
+    display: block;
+}
+
+/* Footer */
+
+.ab-pfo-footer{
+    font-family: Jua;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+    text-align: left;
+    color: #fff;
+    background-color: #2B2B2B;
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
+
+.ab-pfo-footer-detail a{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
 }

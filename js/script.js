@@ -27,3 +27,14 @@ $(".ab-pfo-tech-skills-slick-slider").slick({
 });
 
 
+$('.ab-pfo-academic-tab').each(function(){
+  $(this).click(function(){
+    $('.ab-pfo-academic-tab').removeClass('active');
+    $('.ab-pfo-academic-tab-content').removeClass('active');
+    $(this).addClass('active');
+    
+    var attribute = $(this).attr('data-attribute');
+    $('#'+attribute).addClass('active');
+  })
+})
+
