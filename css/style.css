@@ -72,9 +72,14 @@ body {
 .ab-pfo-banner-section{
     background: url(../images/banner-background.png);
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: 110%;
     background-size: 50%;
     background-position-y: 35%;
+}
+
+.ab-pfo-banner-image{
+    width: fit-content;
+    margin: 0 0 0 auto;
 }
 
 .ab-pfo-banner-container {
