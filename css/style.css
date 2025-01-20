@@ -19,11 +19,14 @@ body {
 
 .ab-pfo-nav-section{
     background-color: #2B2B2B;
+    position: fixed;
+    z-index: 999;
+    top: 0;
 }
 
 .ab-pfo-nav-main-div{
     display: flex;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 }
 
 .ab-pfo-nav-list-container{
@@ -48,7 +51,9 @@ body {
     padding: 10px 0;
     /* transition: 0.5s ease; */
 }
-
+.ab-pfo-nav-list .ab-pfo-nav-list-item .ab-pfo-nav-item.active{
+    border-bottom: 2px solid #fff;
+}
 .ab-pfo-nav-list .ab-pfo-nav-list-item .ab-pfo-nav-item:hover{
     border-bottom: 2px solid #fff;
     /* transition: 0.5s ease; */
@@ -75,6 +80,7 @@ body {
     background-position-x: 110%;
     background-size: 50%;
     background-position-y: 35%;
+    margin-top: 93px;
 }
 
 .ab-pfo-banner-image{
