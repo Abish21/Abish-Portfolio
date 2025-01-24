@@ -166,6 +166,10 @@ body {
     padding: 100px 0;
 }
 
+.ab-pfo-tech-skills-section img{
+    max-width: 60%;
+}
+
 .ab-pfo-tech-skills{
     position: relative;
 }
@@ -309,16 +313,39 @@ body {
     margin-bottom: 30px;
 }
 
+
+/*Projects Card*/
+.ab-pfo-projects-list-div{
+    width: fit-content;
+    max-width: 68rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 1px 2px 18px 0px #dfdddd;
+    margin: 2rem auto 0 auto;
+    padding: 40px;
+}
+.ab-pfo-proj-list-img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ab-pfo-proj-list-img-div img{
+    max-width: 13rem;
+}
+
+
 /* Recognition and awards */
 
 .ab-pfo-awards-section{
-    margin: 60px 0;
+    margin: 60px 0 0 0;
     background: url(../images/yellowbg.png);
     padding: 40px 0;
 }
 
 .ab-pfo-reg-head-oveflow{
-    width:567px;
+    width:274px;
 }
 
 .ab-pfo-awards-holder{
@@ -353,6 +380,37 @@ body {
 
 .ab-pfo-awards-lists-section{
     margin: 70px 0 20px 0;
+}
+
+
+
+/*Get in touch section*/
+.ab-pfo-contact-main-div{
+    margin-top: 3rem;
+}
+.ab-pfo-contact-main-div input, .ab-pfo-contact-main-div textarea{
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+.ab-pfo-contact-main-div textarea{
+    height: 200px;
+}
+.ab-pfo-contact-submit-btn{
+    width: 100%;
+    background-color: #2B2B2B;
+    padding: 10px 10px;
+    color: white;
+    transition: 0.2s ease-in;
+    border: 1px solid #2B2B2B;
+}
+.ab-pfo-contact-submit-btn:hover{
+    background-color: #F3E04F;
+    color: #2B2B2B;
+    transition: 0.2s ease-in;
 }
 
 
@@ -440,14 +498,13 @@ body {
 
 .ab-pfo-footer{
     font-family: Jua;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 45px;
     text-align: left;
     color: #fff;
     background-color: #2B2B2B;
-    padding-bottom: 70px;
-    padding-top: 50px;
+    padding: 10px 0;
 }
 
 .ab-pfo-footer-detail a{
