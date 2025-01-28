@@ -319,10 +319,9 @@ body {
     width: fit-content;
     max-width: 68rem;
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     flex-wrap: wrap;
     justify-content: center;
-    box-shadow: 1px 2px 18px 0px #dfdddd;
     margin: 2rem auto 0 auto;
     padding: 40px;
 }
@@ -411,6 +410,14 @@ body {
     background-color: #F3E04F;
     color: #2B2B2B;
     transition: 0.2s ease-in;
+}
+/* Chrome, Safari, Edge, Opera */
+.input-number::-webkit-outer-spin-button, .input-number::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+} 
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 
