@@ -41,6 +41,18 @@ $(".ab-pfo-tech-skills-slick-slider").slick({
         slidesToShow: 5,
       },
     },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
   ],
 });
 
