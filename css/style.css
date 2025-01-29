@@ -217,7 +217,7 @@ body {
     padding: 80px;
 }
 
-.ab-pfo-prof-jrny-head h1{
+.ab-pfo-prof-jrny-head p{
     font-family: Jua;
     font-size: 48px;
     font-weight: 400;
@@ -241,7 +241,7 @@ body {
 /* Projects that define me */
 
 
-.ab-pfo-projects h1{
+.ab-pfo-projects p{
     font-family: Jua;
     font-size: 48px;
     font-weight: 400;
@@ -516,9 +516,57 @@ input[type=number] {
 
 .ab-pfo-footer-detail a{
     margin-bottom: 0;
-    font-size: 24px;
+    font-size: 20px;
     font-style: italic;
     font-weight: 400;
     text-decoration: none;
     color: #fff;
+}
+
+
+
+
+@media (max-width:1399px) {
+    .ab-pfo-nav-list .ab-pfo-nav-list-item .ab-pfo-nav-item{
+        font-size: 20px;
+    }
+    .ab-pfo-banner-name{
+        font-size: 54px;
+    }
+    .ab-pfo-banner-description{
+        font-size: 24px;
+    }
+    .ab-pfo-sec-head p{
+        font-size: 28px;
+    }
+    .ab-pfo-sec-head-overflow {
+        width: 303px;
+        height: 49px;
+    }
+    .ab-pfo-reg-head-oveflow{
+        width: 210px;
+        height: 47px;
+    }
+    .ab-pfo-tech-skills-section {
+        padding: 60px 0;
+    }
+    .ab-pfo-tech-section{
+        padding: 40px 0 70px 0;
+    }
+    .ab-pfo-prof-jrny-head p, .ab-pfo-projects p{
+        font-size: 36px;
+    }
+    .ab-pfo-prof-jrny-content p{
+        font-size: 26px;
+    }
+    .ab-pfo-prof-jrny-section{
+        padding: 80px 0 48px 0;
+    }
+    .ab-pfo-projects-list-div{
+        margin: 0 auto 0 auto;
+    }
+    .ab-pfo-banner-section{
+        margin-top: 80px;
+    }
+    
 }
