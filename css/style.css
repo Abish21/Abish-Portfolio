@@ -606,7 +606,7 @@ input[type=number] {
 
 @media (max-width:991px) {
     .ab-pfo-banner-image img{
-        max-width: 18rem;
+        max-width: 18rem !important;
     }
     .ab-pfo-prof-jrny-section {
         padding: 52px 0 48px 0;
@@ -628,7 +628,7 @@ input[type=number] {
 
 @media (max-width:767px) {
     .ab-pfo-banner-image img{
-        max-width: 13rem;
+        max-width: 13rem !important;
     }
     .ab-pfo-banner-name {
         font-size: 36px;
@@ -640,5 +640,232 @@ input[type=number] {
         background-position-x: 100%;
         background-size: 47%;
         background-position-y: 19%;
+    }
+    .ab-pfo-prof-jrny-head p, .ab-pfo-projects p {
+        font-size: 28px;
+    }
+    .ab-pfo-prof-jrny-content p {
+        font-size: 16px;
+    }
+    .ab-pfo-prof-jrny-section {
+        padding: 24px 0 20px 0;
+    }
+    .ab-pfo-proj-list-img-div img {
+        max-width: 7rem;
+    }
+    .ab-pfo-projects-list-div {
+        gap: 2rem;
+    }
+    .ab-pfo-contact-main-div input, .ab-pfo-contact-main-div textarea{
+        font-size: 14px;
+    }
+    .slick-arrow svg{
+        width: 38px;
+    }
+    .ab-pfo-tech-skills-section .slick-arrow{
+        bottom: -44%;
+    }
+    .ab-pfo-tech-skill-holder {
+        min-height: 198px;
+    }
+    .ab-pfo-nav-list .ab-pfo-nav-list-item .ab-pfo-nav-item {
+        font-size: 16px;
+    }
+    .ab-pfo-nav-list{
+        gap: 2rem;
+    }
+    .ab-pfo-hamburger span {
+        width: 38px;
+    }
+}
+
+@media (max-width:575px) {
+    .ab-pfo-nav-list-container{
+        display: none; /* Temoprary */
+    }
+    .ab-pfo-hamburger span{
+        width: 38px;
+    }
+    .ab-pfo-banner-name {
+        font-size: 33px;
+    }
+    .ab-pfo-banner-image img {
+        max-width: 12rem !important;
+    }
+    .ab-pfo-banner-section {
+        background-position-x: 102%;
+        background-size: 44%;
+        background-position-y: 4%;
+    }
+    .ab-pfo-sec-head p {
+        font-size: 22px;
+    }
+    .ab-pfo-sec-head-overflow {
+        width: 250px;
+        height: 39px;
+    }
+    .ab-pfo-tech-skills-section{
+        padding: 40px 0;
+    }
+    .ab-pfo-tech-skills-section img{
+        max-width: 60%;
+    }
+    .ab-pfo-prof-jrny-head p, .ab-pfo-projects p{
+        font-size: 22px;
+    }
+    .ab-pfo-prof-jrny-content p{
+        font-size: 14px;
+        margin-top: 18px;
+    }
+    .ab-pfo-reg-head-oveflow{
+        width: 173px;
+    }
+    .ab-pfo-footer-detail a {
+        font-size: 14px;
+    }
+    .ab-pfo-footer-detail img {
+        width: 2rem;
+    }
+    .ab-pfo-footer-detail .email img {
+        width: 1.4rem;
+    }
+    .ab-pfo-contact-main-div input, .ab-pfo-contact-main-div textarea{
+        padding: 14px;
+    }
+    .ab-pfo-tech-skills-section .slick-slide {
+        margin: 0 5px;
+    }
+    .ab-pfo-nav-main-div{
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+    .ab-pfo-banner-section {
+        margin-top: 55px;
+    }
+
+}
+
+@media (max-width:425px) {
+    .ab-pfo-banner-name {
+        font-size: 26px;
+    }
+    .ab-pfo-banner-description {
+        font-size: 11px;
+    }
+    .ab-pfo-banner-image img {
+        max-width: 9rem !important;
+    }
+    .ab-pfo-banner-container {
+        padding-top: 27px;
+    }
+    .ab-pfo-sec-head p {
+        font-size: 16px;
+    }
+    .ab-pfo-sec-head-overflow {
+        width: 195px;
+        height: 32px;
+    }
+    .ab-pfo-tech-section {
+        padding: 30px 0 58px 0;
+    }
+    .ab-pfo-tech-skills-section .slick-slide {
+        margin: 0 5px;
+    }
+    .ab-pfo-tech-skill-holder{
+        border-radius: 57px;
+    }
+    .ab-pfo-tech-skills-section .slick-arrow {
+        bottom: -39%;
+    }
+    .ab-pfo-prof-jrny-head p, .ab-pfo-projects p {
+        font-size: 20px;
+    }
+    .ab-pfo-prof-jrny-content p {
+        font-size: 13px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .ab-pfo-projects p{
+        margin-bottom: 0;
+    }
+    .ab-pfo-proj-list-img-div img {
+        max-width: 5rem;
+    }
+    .ab-pfo-projects-list-div {
+        gap: 1rem;
+        padding-bottom: 0;
+    }
+    .ab-pfo-reg-head-oveflow{
+        width: 140px;
+    }
+    .ab-pfo-awards-section{
+        padding-top: 30px;
+    }
+    .ab-pfo-contact-main-div {
+        margin-top: 2rem;
+    }
+    .ab-pfo-contact-main-div textarea {
+        height: 138px;
+    }
+    .ab-pfo-contact-main-div input, .ab-pfo-contact-main-div textarea {
+        font-size: 12px;
+    }
+    .ab-pfo-tech-skill-holder {
+        min-height: 168px;
+    }
+    .ab-pfo-footer-detail{
+        flex-wrap: wrap;
+        gap: 20px !important;
+    }
+    .ab-pfo-banner-section {
+        background-position-x: 100%;
+        background-size: 46%;
+        background-position-y: 5%;
+    }
+    .ab-pfo-contact-submit-btn{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:345px) {
+    .ab-pfo-banner-name {
+        font-size: 22px;
+    }
+    .ab-pfo-banner-description {
+        font-size: 10px;
+    }
+    .ab-pfo-banner-image img {
+        max-width: 7rem !important;
+    }
+    .ab-pfo-tech-section {
+        padding: 20px 0 38px 0;
+    }
+    .ab-pfo-tech-skills-section img {
+        max-width: 49%;
+    }
+    .ab-pfo-tech-skill-holder {
+        min-height: 146px;
+        border-radius: 45px;
+    }
+    .slick-arrow svg {
+        width: 31px;
+    }
+    .ab-pfo-prof-jrny-head p, .ab-pfo-projects p {
+        font-size: 18px;
+    }
+    .ab-pfo-prof-jrny-content p {
+        font-size: 11px;
+    }
+    .ab-pfo-proj-list-img-div img {
+        max-width: 3rem;
+    }
+    .ab-pfo-contact-main-div input, .ab-pfo-contact-main-div textarea {
+        font-size: 11px;
+    }
+    .ab-pfo-contact-main-div input, .ab-pfo-contact-main-div textarea {
+        padding: 10px;
+    }
+    .ab-pfo-contact-submit-btn{
+        font-size: 12px;
     }
 }

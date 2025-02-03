@@ -20,7 +20,7 @@ $(".ab-pfo-tech-skills-slick-slider").slick({
   slidesToShow: 6,
   infinite: true,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 1500,
   dots: false,
   arrows: true,
@@ -51,6 +51,18 @@ $(".ab-pfo-tech-skills-slick-slider").slick({
       breakpoint: 992,
       settings: {
         slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 426,
+      settings: {
+        slidesToShow: 3,
       },
     },
   ],
