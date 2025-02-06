@@ -79,3 +79,47 @@ $(".ab-pfo-academic-tab").each(function () {
     $("#" + attribute).addClass("active");
   });
 });
+
+
+// Form Validation
+document.getElementById("Contact-Form").addEventListener("submit", validateForm);
+
+function validateForm(event) {
+  console.log("caled");
+  let phonevalid = false;
+  let emailvalid = false;
+
+  // Phone Number Validation
+  let phoneInput = document.getElementById("phone-number").value;
+  let phoneError = document.getElementById("phone-error");
+  if (!/^\d{10}$/.test(phoneInput)) {
+    phoneError.textContent = "Phone number must be exactly 10 digits.";
+    phoneError.style.display = "block";
+    phonevalid = false;
+  } else {
+    phoneError.textContent = "";
+    phonevalid = true;
+  }
+
+  // Email Validation
+  let emailInput = document.getElementById("email").value;
+  let emailError = document.getElementById("emial-error");
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput)) {
+    emailError.textContent = "Please enter a valid email address.";
+    emailError.style.display = "block";
+    emailvalid = false;
+  } else {
+    emailError.textContent = "";
+    emailvalid = true;
+  }
+
+  if (!phonevalid || !emailvalid) {
+    event.preventDefault(); 
+    return false;
+  }
+
+  return true;
+
+};
+

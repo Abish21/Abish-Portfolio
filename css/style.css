@@ -501,6 +501,16 @@ input[type=number] {
     display: block;
 }
 
+.input-msg{
+    color: red;
+    margin-top: -10px;
+    display: block;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    display: none;
+}
+
 /* Footer */
 
 .ab-pfo-footer{
@@ -741,6 +751,9 @@ input[type=number] {
     }
     .ab-pfo-banner-section {
         margin-top: 55px;
+    }
+    .input-msg{
+        font-size: 12px;
     }
 
 }
