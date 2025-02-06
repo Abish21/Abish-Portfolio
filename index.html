@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-6">
                     <div class="ab-pfo-banner-image">
-                        <img src="/images/abish_illus.png" style="max-width: 607px;" alt="abish">
+                        <img src="images/abish_illus.png" style="max-width: 607px;" alt="abish">
                     </div>
                 </div>
             </div>
@@ -242,7 +242,10 @@
                         <span class="phone-number-error input-msg" id="phone-error"></span>
                     </div>
                     <div class="col-md-12">
-                        <input class="input-email" id="email" type="email" name="email" placeholder="Email *" required>
+                        <div class="input-email-div">
+                            <input class="input-email" id="email" type="email" name="email" placeholder="Email *" required>
+                            <span class="email-verify-btn" onclick="verify()">Verify</span>
+                        </div>
                         <span class="phone-email-error input-msg" id="emial-error"></span>
                     </div>
                     <div class="col-md-12">
@@ -255,6 +258,15 @@
             </form>
         </div>
      </section>
+
+    <!-- OTP Verification Popup -->
+    <div id="otpModal" class="modal">
+        <div class="modal-content">
+            <h3>Enter OTP</h3>
+            <input type="text" id="otp" placeholder="Enter OTP" required>
+            <button onclick="verifyOTP()">Verify OTP</button>
+        </div>
+    </div>
     <!-- Recognize my awards: END -->
 
     <!-- Academic Background : START -->

@@ -85,7 +85,6 @@ $(".ab-pfo-academic-tab").each(function () {
 document.getElementById("Contact-Form").addEventListener("submit", validateForm);
 
 function validateForm(event) {
-  console.log("caled");
   let phonevalid = false;
   let emailvalid = false;
 
@@ -122,4 +121,53 @@ function validateForm(event) {
   return true;
 
 };
+
+
+
+// Verify button show 
+$("#email").on("input", function(){
+  if($(this).val().trim() != ""){
+    $(".email-verify-btn").show();
+  }else{
+    $(".email-verify-btn").hide();
+  }
+});
+
+
+// Very button function 
+function verify(){
+  let emailInput = document.getElementById("email").value;
+  let emailError = document.getElementById("emial-error");
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput)) {
+    emailError.textContent = "Please enter a valid email address.";
+    emailError.style.display = "block";
+  } else {
+    emailError.textContent = "";
+    sendOTP()
+  }
+}
+
+
+function sendOTP() {
+  var email = document.getElementById("email").value;
+  if (email == "") {
+      alert("Please enter your email first.");
+      return;
+  }
+
+  // Open the OTP popup
+  document.getElementById("otpModal").style.display = "block";
+
+  // Send OTP to email
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "send_otp.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+          alert(xhr.responseText);
+      }
+  };
+  xhr.send("email=" + email);
+}
 
