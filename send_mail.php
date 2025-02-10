@@ -7,6 +7,7 @@ require 'vendor/autoload.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $name = $_POST['name'];
+    $phone = $_POST['phone-number'];
     $message = $_POST['message'];
 
     $mail = new PHPMailer(true);
@@ -14,21 +15,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'abishecesis@gmail.com';
-        $mail->Password = 'aqigslfcmxkwehcq';
+        $mail->Username = 'abish0721@gmail.com';
+        $mail->Password = 'ekyijzdquerpsmoa';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('abishecesis@gmail.com', 'Your Name');
-        $mail->addAddress($email);
-        $mail->addCC('abishecesis@gmail.com');
+        $mail->setFrom('abish0721@gmail.com', 'Portfolio - Contact');
+        $mail->addAddress('abishabi2107@gmail.com');
+        // $mail->addCC('abish0721@gmail.com');
 
         $mail->isHTML(true);
-        $mail->Subject = 'Welcome!';
-        $mail->Body = "Hello <b>$name</b>,<br><br>Thank you for registering.";
+        $mail->Subject = 'Portfolio - Contact';
+        $mail->Body = "<b>$name</b> Has Submited your portfolio contact form.<br>The email id is: $email<br>Phone number is: $phone<br>Message is: $message";
 
         $mail->send();
-        echo "Welcome email sent!";
+
     } catch (Exception $e) {
         echo "Email failed to send. Error: {$mail->ErrorInfo}";
     }

@@ -82,7 +82,7 @@ $(".ab-pfo-academic-tab").each(function () {
 
 
 // Form Validation
-document.getElementById("Contact-Form").addEventListener("submit", validateForm);
+// document.getElementById("Contact-Form").addEventListener("submit", validateForm);
 
 function validateForm(event) {
   let phonevalid = false;
@@ -117,57 +117,51 @@ function validateForm(event) {
     event.preventDefault(); 
     return false;
   }
-
-  return true;
+  sendMail();
+  return false;
 
 };
 
 
-
-// Verify button show 
-$("#email").on("input", function(){
-  if($(this).val().trim() != ""){
-    $(".email-verify-btn").show();
-  }else{
-    $(".email-verify-btn").hide();
-  }
-});
-
-
-// Very button function 
-function verify(){
-  let emailInput = document.getElementById("email").value;
-  let emailError = document.getElementById("emial-error");
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(emailInput)) {
-    emailError.textContent = "Please enter a valid email address.";
-    emailError.style.display = "block";
-  } else {
-    emailError.textContent = "";
-    sendOTP()
-  }
+// Mail Send Success Message 
+function submitMsg(message){
+  $(".confirm-msg-div").fadeIn();
+  $('.confirm-msg').textContent(message);
+  
 }
 
 
-function sendOTP() {
+function sendMail() {
+  console.log("Send mail called");
   var email = document.getElementById("email").value;
-  if (email == "") {
-      alert("Please enter your email first.");
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone-number").value;
+  var message = document.getElementById("message").value;
+
+  if (email == "" || name == "" || message == "") {
+      alert("Fields Should not be empty");
       return;
   }
 
-  // Open the OTP popup
-  document.getElementById("otpModal").style.display = "block";
-
   // Send OTP to email
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "send_otp.php", true);
+  var message = "";
+  xhr.open("POST", "send_mail.php", true);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
-          alert(xhr.responseText);
+          message = "Form Submitted";
+          submitMsg(message);
+      }
+      else{
+        message = "Faild to Submit";
+        submitMsg(message);
       }
   };
-  xhr.send("email=" + email);
+
+  var params = "email=" + encodeURIComponent(email) + "&name=" + encodeURIComponent(name) + "&phone-number=" + encodeURIComponent(phone) + "&message=" + encodeURIComponent(message);
+
+  xhr.send(params);
+
 }
 

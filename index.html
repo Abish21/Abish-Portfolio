@@ -235,7 +235,7 @@
             <form action="#" onsubmit="return validateForm();" id="Contact-Form">
                 <div class="ab-pfo-contact-main-div row">
                     <div class="col-md-6">
-                        <input class="input-name" type="text" name="name" placeholder="Name *" required>
+                        <input class="input-name" id="name" type="text" name="name" placeholder="Name *" required>
                     </div>
                     <div class="col-md-6">
                         <input class="input-number" id="phone-number" type="number" name="phone-number" placeholder="Phone Number *" required>
@@ -244,12 +244,11 @@
                     <div class="col-md-12">
                         <div class="input-email-div">
                             <input class="input-email" id="email" type="email" name="email" placeholder="Email *" required>
-                            <span class="email-verify-btn" onclick="verify()">Verify</span>
                         </div>
                         <span class="phone-email-error input-msg" id="emial-error"></span>
                     </div>
                     <div class="col-md-12">
-                        <textarea class="input-message"  name="message" placeholder="Message *" required></textarea>
+                        <textarea class="input-message" id="message"  name="message" placeholder="Message *" required></textarea>
                     </div>
                     <div class="col-md-12">
                         <button class="ab-pfo-contact-submit-btn" type="submit">Submit</button>
@@ -259,15 +258,12 @@
         </div>
      </section>
 
-    <!-- OTP Verification Popup -->
-    <div id="otpModal" class="modal">
-        <div class="modal-content">
-            <h3>Enter OTP</h3>
-            <input type="text" id="otp" placeholder="Enter OTP" required>
-            <button onclick="verifyOTP()">Verify OTP</button>
-        </div>
+    <!-- Main Send Confirmation message:Start  -->
+    <div class="confirm-msg-div">
+        <p class="confirm-msg">asasdasdasf</p>
     </div>
-    <!-- Recognize my awards: END -->
+    <!-- Main Send Confirmation message:End  -->
+
 
     <!-- Academic Background : START -->
     <!-- <section class="ab-pfo-academic-section">

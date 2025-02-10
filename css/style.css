@@ -575,6 +575,21 @@ input:focus-visible, textarea:focus-visible{
 }
 
 
+/* Mail send Success  */
+.confirm-msg-div{
+    position: fixed;
+    right: 0;
+    top: 10px;
+    background-color: #bffdbe;
+    z-index: 9999999;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid green;
+}
+.confirm-msg{
+    margin-bottom: 0;
+    color: green;
+}
 
 
 @media (max-width:1399px) {
