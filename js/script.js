@@ -82,7 +82,7 @@ $(".ab-pfo-academic-tab").each(function () {
 
 
 // Form Validation
-// document.getElementById("Contact-Form").addEventListener("submit", validateForm);
+document.getElementById("Contact-Form").addEventListener("submit", validateForm);
 
 function validateForm(event) {
   let phonevalid = false;
@@ -117,6 +117,7 @@ function validateForm(event) {
     event.preventDefault(); 
     return false;
   }
+  event.preventDefault();
   sendMail();
   return false;
 
@@ -124,15 +125,25 @@ function validateForm(event) {
 
 
 // Mail Send Success Message 
-function submitMsg(message){
+function submitMsg(conMessage){
+  if(conMessage == "Email sending failed" || conMessage == "Failed to Submit. Please try again later"){
+    $(".confirm-msg-div").css({
+      "background-color" :"#ff9393", 
+      "border": "2px solid #e90000"
+    });
+    $(".confirm-msg").css({
+      "color": "#e90000"
+    });
+  }
   $(".confirm-msg-div").fadeIn();
-  $('.confirm-msg').textContent(message);
-  
+  $('.confirm-msg').text(conMessage);
+  setTimeout(function(){
+    $(".confirm-msg-div").fadeOut();
+  },3000);
 }
 
 
 function sendMail() {
-  console.log("Send mail called");
   var email = document.getElementById("email").value;
   var name = document.getElementById("name").value;
   var phone = document.getElementById("phone-number").value;
@@ -143,20 +154,26 @@ function sendMail() {
       return;
   }
 
-  // Send OTP to email
+  // Send email
   var xhr = new XMLHttpRequest();
-  var message = "";
+  var conMessage = "";
   xhr.open("POST", "send_mail.php", true);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  $(".loader-div").fadeIn();
+
   xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-          message = "Form Submitted";
-          submitMsg(message);
+    if (xhr.readyState === 4) {
+      $(".loader-div").fadeOut(); // Hide loader after response is received
+
+      if (xhr.status === 200) {
+          conMessage = xhr.responseText;
+          submitMsg(conMessage); // Success message
+      } else {
+          conMessage = "Failed to Submit. Please try again later"; // Custom failure message
+          submitMsg(conMessage);
       }
-      else{
-        message = "Faild to Submit";
-        submitMsg(message);
-      }
+    }
   };
 
   var params = "email=" + encodeURIComponent(email) + "&name=" + encodeURIComponent(name) + "&phone-number=" + encodeURIComponent(phone) + "&message=" + encodeURIComponent(message);

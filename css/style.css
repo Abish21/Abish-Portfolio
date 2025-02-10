@@ -578,17 +578,44 @@ input:focus-visible, textarea:focus-visible{
 /* Mail send Success  */
 .confirm-msg-div{
     position: fixed;
-    right: 0;
+    right: 10px;
     top: 10px;
     background-color: #bffdbe;
-    z-index: 9999999;
+    z-index: 9999;
     padding: 10px 20px;
     border-radius: 5px;
     border: 2px solid green;
+    display: none;
 }
 .confirm-msg{
     margin-bottom: 0;
     color: green;
+}
+.loader-div{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid  #F3E04F;
+    border-top: 5px solid #2B2B2B;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
 }
 
 
@@ -810,6 +837,12 @@ input:focus-visible, textarea:focus-visible{
     }
     .input-msg{
         font-size: 12px;
+    }
+    .confirm-msg{
+        font-size: 12px;
+    }
+    .confirm-msg-div{
+        padding: 7px 12px;
     }
 
 }

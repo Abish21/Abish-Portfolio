@@ -28,10 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Subject = 'Portfolio - Contact';
         $mail->Body = "<b>$name</b> Has Submited your portfolio contact form.<br>The email id is: $email<br>Phone number is: $phone<br>Message is: $message";
 
-        $mail->send();
+        if ($mail->send()) {
+            echo "Form submitted successfully!";
+        } else {
+            echo "Email sending failed";
+        }
 
     } catch (Exception $e) {
-        echo "Email failed to send. Error: {$mail->ErrorInfo}";
+        echo "Faild to Submit";
     }
 }
 ?>
