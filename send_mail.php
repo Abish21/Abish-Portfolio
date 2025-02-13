@@ -3,12 +3,17 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
+include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $name = $_POST['name'];
     $phone = $_POST['phone-number'];
     $message = $_POST['message'];
+
+    $sql = "INSERT INTO contact_details (name, phone_number, email, message) VALUES ('$name','$phone','$email','$message')";
+    $conn -> query($sql);
+    $conn->close();
 
     $mail = new PHPMailer(true);
     try {
