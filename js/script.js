@@ -17,7 +17,33 @@ $(".ab-pfo-nav-item").click(function () {
 
 // Hamburger Animation 
 $(".ab-pfo-hamburger").click(() => {
+  $(".mob.ab-pfo-nav-list-container").removeClass("animate-reverse");
   $(".ab-pfo-hamburger").toggleClass("animate");
+  $(".mob.ab-pfo-nav-list-container").toggleClass("show");
+  
+});
+
+$(".mob.ab-pfo-nav-list-container .ab-pfo-nav-list-item").click(() => {
+  $(".mob.ab-pfo-nav-list-container").removeClass("show");
+  $(".ab-pfo-hamburger").removeClass("animate");
+  $(".mob.ab-pfo-nav-list-container").addClass("animate-reverse");
+});
+
+
+
+//Scroll to top
+$(document).ready(function(){
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+          $('#go-top').fadeIn();
+      } else {
+          $('#go-top').fadeOut();
+      }
+  });
+
+  $("#go-top").click(function(){
+      $("html, body").animate({scrollTop: 0}, 800);
+  });
 });
 
 // Skills Slider
