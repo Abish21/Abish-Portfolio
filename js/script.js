@@ -15,6 +15,11 @@ $(".ab-pfo-nav-item").click(function () {
   }
 });
 
+// Hamburger Animation 
+$(".ab-pfo-hamburger").click(() => {
+  $(".ab-pfo-hamburger").toggleClass("animate");
+});
+
 // Skills Slider
 $(".ab-pfo-tech-skills-slick-slider").slick({
   slidesToShow: 6,
@@ -137,11 +142,16 @@ function submitMsg(conMessage){
   }
   $(".confirm-msg-div").fadeIn();
   $('.confirm-msg').text(conMessage);
+  // Empty the field after submit 
+  $("#email").val("");
+  $("#name").val("");
+  $("#phone-number").val("");
+  $("#message").val("");
+
   setTimeout(function(){
     $(".confirm-msg-div").fadeOut();
   },3000);
 }
-
 
 function sendMail() {
   var email = document.getElementById("email").value;
