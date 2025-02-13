@@ -51,7 +51,7 @@ $(".ab-pfo-tech-skills-slick-slider").slick({
   slidesToShow: 6,
   infinite: true,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 1500,
   dots: false,
   arrows: true,
