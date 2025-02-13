@@ -677,7 +677,7 @@ input:focus-visible, textarea:focus-visible{
 .loader {
     position: absolute;
     top: 50%;
-    right: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
     width: 50px;
     height: 50px;
@@ -913,6 +913,7 @@ input:focus-visible, textarea:focus-visible{
     .ab-pfo-prof-jrny-content p{
         font-size: 14px;
         margin-top: 18px;
+        text-align: justify;
     }
     .ab-pfo-reg-head-oveflow{
         width: 173px;
@@ -951,6 +952,9 @@ input:focus-visible, textarea:focus-visible{
     .go-top{
         width: 40px;
         height: 40px;
+    }
+    .ab-pfo-footer-detail{
+        gap: unset !important;
     }
 
 }
@@ -1034,6 +1038,15 @@ input:focus-visible, textarea:focus-visible{
     }
     .ab-pfo-contact-submit-btn{
         font-size: 14px;
+    }
+}
+
+@media (max-width:375px) {
+    .ab-pfo-footer-detail .email img {
+        width: 1rem;
+    }
+    .ab-pfo-footer-detail a {
+        font-size: 12px;
     }
 }
 
