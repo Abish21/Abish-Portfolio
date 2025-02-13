@@ -1,18 +1,38 @@
-// Nav bar Section
-$(".ab-pfo-nav-item").click(function () {
-  $(".ab-pfo-nav-item").removeClass("active");
-  $(this).addClass("active");
+$(document).ready(function(){
+  // Nav bar Section
+  $(".ab-pfo-nav-item").click(function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
 
-  var target = $($(this).attr("href")); // Get target section
+    $(".ab-pfo-nav-item").removeClass("active");
+    $(this).addClass("active");
 
-  if (target.length) {
-    $("html, body").animate(
-      {
-        scrollTop: target.offset().top - 100, // Adjust offset as needed (e.g., for fixed headers)
-      },
-      800
-    );
-  }
+    var target = $($(this).attr("href")); // Get target section
+
+    if (target.length) {
+        window.scrollTo({
+            top: target.offset().top - 100,
+            behavior: "smooth"
+        });
+    }
+  });
+
+
+  //Scroll to top
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+          $('#go-top').fadeIn();
+          $('#go-top').css("display","flex");
+      } else {
+          $('#go-top').fadeOut();
+      }
+  });
+
+  $("#go-top").click(function(){
+    window.scrollTo({
+        top: $("html, body").offset().top,
+        behavior: "smooth"
+    });
+  });
 });
 
 // Hamburger Animation 
@@ -29,22 +49,6 @@ $(".mob.ab-pfo-nav-list-container .ab-pfo-nav-list-item").click(() => {
   $(".mob.ab-pfo-nav-list-container").addClass("animate-reverse");
 });
 
-
-
-//Scroll to top
-$(document).ready(function(){
-  $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
-          $('#go-top').fadeIn();
-      } else {
-          $('#go-top').fadeOut();
-      }
-  });
-
-  $("#go-top").click(function(){
-      $("html, body").animate({scrollTop: 0}, 800);
-  });
-});
 
 // Skills Slider
 $(".ab-pfo-tech-skills-slick-slider").slick({

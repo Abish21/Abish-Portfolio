@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Body Styles */
@@ -37,18 +38,17 @@ body {
     position: absolute;
     width: 100%;
     left: 0;
-    transform: translateX(100%);
-    animation: horizontal-animate-reverse 1s;
+    transition: 0.7s ease-in-out;
 }
 .mob.ab-pfo-nav-list-container a{
     font-weight: 600;
 }
 .mob.ab-pfo-nav-list-container.animate-reverse{
     transform: translateX(100%);
-    animation: horizontal-animate-reverse 1s;
+    animation: horizontal-animate-reverse 0.7s;
 }
 .mob.ab-pfo-nav-list-container.show{
-    animation: horizontal-animate 1s;
+    animation: horizontal-animate 0.7s;
     transform: translateX(0%);
 }
 @keyframes horizontal-animate{
@@ -109,7 +109,7 @@ body {
 }
 
 .ab-pfo-hamburger{
-    display: flex;
+    display: none;
     gap: 5px;
     flex-direction: column;
     cursor: pointer;
@@ -127,7 +127,7 @@ body {
     transition: 0.3s ease-in-out;
 }
 .animate.ab-pfo-hamburger span:nth-child(1){
-    transform: rotate(45deg) translate(5px, 7px);
+    transform: rotate(45deg) translate(6px, 6px);
     transition: 0.3s ease-in-out;
 }
 .animate.ab-pfo-hamburger span:nth-child(3){
@@ -702,7 +702,7 @@ input:focus-visible, textarea:focus-visible{
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -856,6 +856,7 @@ input:focus-visible, textarea:focus-visible{
     }
     .ab-pfo-tech-skill-holder {
         min-height: 198px;
+        border-radius: 54px;
     }
     .ab-pfo-nav-list .ab-pfo-nav-list-item .ab-pfo-nav-item {
         font-size: 16px;
@@ -874,6 +875,10 @@ input:focus-visible, textarea:focus-visible{
     }
     .mob.ab-pfo-nav-list-container{
         display: block;
+        transform: translateX(100%);
+    }
+    .ab-pfo-hamburger{
+        display: flex;
     }
     .ab-pfo-hamburger span{
         width: 38px;
@@ -977,10 +982,10 @@ input:focus-visible, textarea:focus-visible{
         margin: 0 5px;
     }
     .ab-pfo-tech-skill-holder{
-        border-radius: 57px;
+        border-radius: 43px;
     }
     .ab-pfo-tech-skills-section .slick-arrow {
-        bottom: -39%;
+        bottom: -47%;
     }
     .ab-pfo-prof-jrny-head p, .ab-pfo-projects p {
         font-size: 20px;
@@ -1016,7 +1021,7 @@ input:focus-visible, textarea:focus-visible{
         font-size: 12px;
     }
     .ab-pfo-tech-skill-holder {
-        min-height: 168px;
+        min-height: 147px;
     }
     .ab-pfo-footer-detail{
         flex-wrap: wrap;
@@ -1049,8 +1054,8 @@ input:focus-visible, textarea:focus-visible{
         max-width: 49%;
     }
     .ab-pfo-tech-skill-holder {
-        min-height: 146px;
-        border-radius: 45px;
+        min-height: 131px;
+        border-radius: 36px;
     }
     .slick-arrow svg {
         width: 31px;
